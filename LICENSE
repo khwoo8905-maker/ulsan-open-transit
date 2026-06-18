@@ -1,0 +1,27 @@
+MIT License
+
+Copyright (c) 2026 Dambaek (담백)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+NOTE / 참고
+- 위 MIT 라이선스는 이 저장소의 **코드**에 적용됩니다.
+- 가공 **데이터셋**(dataset/, accessibility_by_stop.csv 등)은 **CC BY 4.0**으로 공개합니다.
+- 원천 데이터(공공데이터포털 data.go.kr, OpenStreetMap)는 각 제공처의 이용약관·라이선스를 따르며 출처표시 의무를 준수합니다.

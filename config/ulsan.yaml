@@ -1,0 +1,28 @@
+# 울산 대중교통 접근성 분석 설정 (도시 교체 시 이 파일만 갈아끼우면 됨)
+# Ulsan Open Transit — config
+
+city: 울산
+crs: EPSG:4326
+
+inputs:
+  osm_pbf: ulsan.osm.pbf        # OSM 도로망 (geofabrik 추출)
+  gtfs: gtfs.zip                # 버스 시간표 (우리 데이터→GTFS 변환본)
+  demand: demand_stops_geo.json # 정류장 수요+좌표 [name, ride, goff, lat, lon] (국가대중교통DB 승하차)
+
+analysis:
+  departure: "2026-06-15T08:00:00"  # 평일 출근 피크
+  modes: [TRANSIT, WALK]
+  thresholds_min: [15, 30, 45, 60]  # 접근 등급 구간
+  within_min: 45                    # "거점 N개 도달가능" 기준 시간
+
+# 생활권 거점 — 다핵도시 울산의 실제 통행 목적지 (시청 단일 가정 탈피)
+# 좌표는 GTFS stops / 승하차 데이터의 실제 정류장에서 확정
+destinations:
+  - {id: cityhall,   name: 시청,            lat: 35.5397, lon: 129.3124, category: 도심·행정}
+  - {id: samsan,     name: 삼산·현대백화점,  lat: 35.5405, lon: 129.3356, category: 도심·상업}
+  - {id: taehwagang, name: 태화강역,         lat: 35.5417, lon: 129.3534, category: 철도환승}
+  - {id: ulsanuniv,  name: 울산대학교,       lat: 35.5462, lon: 129.2611, category: 교육}
+  - {id: hhi,        name: 현대중공업,       lat: 35.5329, lon: 129.4326, category: 동부·고용}
+  - {id: uuh,        name: 울산대학교병원,    lat: 35.5193, lon: 129.4299, category: 동부·의료}
+  - {id: ktx,        name: KTX울산역,        lat: 35.5506, lon: 129.1388, category: 광역·서부}
+  - {id: eonyang,    name: 언양터미널,       lat: 35.5631, lon: 129.1274, category: 광역·서부}

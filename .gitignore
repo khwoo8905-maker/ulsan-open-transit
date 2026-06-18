@@ -1,0 +1,27 @@
+# 비밀키
+.env
+
+# 원시 수집 데이터 (스크립트로 재생성 가능, 용량 큼)
+data/
+*.jsonl
+
+# 공개 데이터셋(dataset/)은 추적
+!dataset/
+
+# 산출물 / 환경
+*.pyc
+__pycache__/
+gtfs/
+gtfs.zip
+venv/
+
+# 내부 운영·전략 문서 (공개 repo 제외 — 키 하드코딩은 없으나 내부용)
+poll_key.sh
+run_collector.sh
+api_ops.txt
+FINDINGS_*.md
+COUNCIL_*.md
+
+# 옛 7거점 시각물(현재 지도는 ulsan_access_map.html) — 공개 제외
+ulsan_demand_access_map.html
+ulsan_map.png
