@@ -25,3 +25,15 @@ COUNCIL_*.md
 # 옛 7거점 시각물(현재 지도는 ulsan_access_map.html) — 공개 제외
 ulsan_demand_access_map.html
 ulsan_map.png
+
+# === 산단 레이어: 내부·중간산출물·환경·원본 (공개 제외, 하드) ===
+.venv/
+*.osm.pbf
+# 작업·드래프트·중간데이터 일체 (공개본은 sandan/ 로 승격)
+experiments/
+*_static.html
+*지시서*.md
+*_클과장*.md
+*_코주임*.md
+REPORT_TO_*.md
+*CLAGWAJANG*
