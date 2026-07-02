@@ -27,6 +27,7 @@ def oneway(s):
 
 # 1) routes.csv — 노선 구조 지표 (편도 정규화)
 routes = json.load(open(BASE / "data" / "routes_stops.json"))
+n_route_rows = 0
 with open(OUT / "routes.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     w.writerow(["route_id", "route_no", "route_type", "n_stops", "length_km", "detour"])
@@ -42,6 +43,7 @@ with open(OUT / "routes.csv", "w", newline="", encoding="utf-8") as f:
         detour = round(path / diam, 2) if diam > 500 else ""
         w.writerow([d["routeid"], d["routeno"], d.get("routetp", ""), len(s1),
                     round(path / 1000, 2), detour])
+        n_route_rows += 1
 
 # 2) stops_demand.csv — 정류장 좌표 + 실수요 (평일 기준)
 geo = json.load(open(BASE / "data" / "demand_stops_geo.json"))
@@ -87,6 +89,6 @@ with open(OUT / "demand_hourly.csv", "w", newline="", encoding="utf-8") as f:
                     r["tzon"], r["utype"], r["ride"], r["goff"]])
         n += 1
 
-print(f"dataset/ 생성: routes.csv({len(routes)}) / stops_demand.csv / accessibility.csv / demand_hourly.csv({n}행)")
+print(f"dataset/ 생성: routes.csv({n_route_rows}행) / stops_demand.csv / accessibility.csv / demand_hourly.csv({n}행)")
 for p in sorted(OUT.glob("*.csv")):
     print(f"  {p.name}: {p.stat().st_size//1024}KB")
