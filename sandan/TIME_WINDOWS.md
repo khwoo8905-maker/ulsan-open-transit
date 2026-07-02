@@ -1,6 +1,6 @@
 # 산단 교대시간대 R5 시뮬레이션
 
-R5 실제 출력: `sandan_accessibility_0600_by_stop.csv`, `sandan_accessibility_0800_by_stop.csv`, `sandan_accessibility_2200_by_stop.csv`.
+R5 실제 출력: `repro/sandan_accessibility_0600_by_stop.csv`, `repro/sandan_accessibility_0800_by_stop.csv`, `repro/sandan_accessibility_2200_by_stop.csv`.
 
 집계 기준: 고용>0 산단 20개, 산단별 정류장 수요가중 접근분을 다시 계산한 뒤 고용가중 평균 산출.
 

@@ -1,0 +1,337 @@
+city: 울산 산단
+crs: EPSG:4326
+inputs:
+  osm_pbf: ulsan.osm.pbf
+  gtfs: experiments/sandan/gtfs_sandan_express_35kph.zip
+  demand: data/demand_stops_geo.json
+analysis:
+  departure: '2026-06-15T08:00:00'
+  modes:
+  - TRANSIT
+  - WALK
+  thresholds_min:
+  - 15
+  - 30
+  - 45
+  - 60
+  within_min: 45
+destinations:
+- id: ulsan_mipo
+  name: 울산ㆍ미포
+  lat: 35.48234
+  lon: 129.362488
+  category: 국가·남구
+  employment: 98008
+  operating_firms: 738
+  source_file: kicox_national_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 산업단지위치도면 SHP centroid (data.go.kr/15081111); 48.5㎢ 다지구 대표중심점
+  coord_confidence: 중
+- id: onsan
+  name: 온산
+  lat: 35.433332
+  lon: 129.348576
+  category: 국가·울주군
+  employment: 15498
+  operating_firms: 274
+  source_file: kicox_national_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 산업단지위치도면 SHP centroid (data.go.kr/15081111) 대표중심점
+  coord_confidence: 중
+- id: maegok
+  name: 매곡
+  lat: 35.646613
+  lon: 129.364376
+  category: 일반·북구
+  employment: 1673
+  operating_firms: 58
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP + OSM way/366905893 일치
+  coord_confidence: 상
+- id: module
+  name: 모듈화
+  lat: 35.570515
+  lon: 129.376902
+  category: 일반·북구
+  employment: 2476
+  operating_firms: 30
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP + OSM way/1175516352 일치
+  coord_confidence: 상
+- id: ihwa
+  name: 이화
+  lat: 35.6691947
+  lon: 129.3483908
+  category: 일반·북구
+  employment: null
+  operating_firms: 1
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: jungsan
+  name: 중산
+  lat: 35.659
+  lon: 129.35
+  category: 일반·북구
+  employment: 364
+  operating_firms: 19
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: gilcheon
+  name: 길천
+  lat: 35.596631
+  lon: 129.079336
+  category: 일반·울주군
+  employment: 2150
+  operating_firms: 86
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111)
+  coord_confidence: 중
+- id: sin_free_trade
+  name: 신 (① + ②)
+  lat: 35.472621
+  lon: 129.334189
+  category: 일반·울주군
+  employment: 3416
+  operating_firms: 108
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111) 신일반산업단지; 자유무역지역 입지중첩
+  coord_confidence: 중
+- id: waji
+  name: 와지
+  lat: 35.439014
+  lon: 129.160231
+  category: 일반·울주군
+  employment: 283
+  operating_firms: 25
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111)
+  coord_confidence: 중
+- id: high_tech_valley
+  name: 울산 High Tech Valley
+  lat: 35.517894
+  lon: 129.091693
+  category: 일반·울주군
+  employment: 405
+  operating_firms: 18
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111) 1단계
+  coord_confidence: 중
+- id: bonggye
+  name: 봉계
+  lat: 35.7089
+  lon: 129.208256
+  category: 일반·울주군
+  employment: 450
+  operating_firms: 9
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111) 봉계일반[구:두동]
+  coord_confidence: 중
+- id: kcc_ulsan
+  name: KCC울산
+  lat: 35.697875
+  lon: 129.190205
+  category: 일반·울주군
+  employment: 1217
+  operating_firms: 40
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111)
+  coord_confidence: 중
+- id: jeoneup
+  name: 전읍
+  lat: 35.579
+  lon: 129.173
+  category: 일반·울주군
+  employment: 82
+  operating_firms: 4
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: bancheon
+  name: 반천
+  lat: 35.561895
+  lon: 129.148516
+  category: 일반·울주군
+  employment: 1779
+  operating_firms: 69
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111)
+  coord_confidence: 중
+- id: jakdong
+  name: 작동
+  lat: 35.543
+  lon: 129.106
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: jungsan2
+  name: 중산2차
+  lat: 35.66292
+  lon: 129.352201
+  category: 일반·북구
+  employment: 890
+  operating_firms: 39
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP + OSM way/1074419969 일치
+  coord_confidence: 상
+- id: maegok2
+  name: 매곡2
+  lat: 35.6516584
+  lon: 129.363181
+  category: 일반·북구
+  employment: 170
+  operating_firms: 10
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: maegok3
+  name: 매곡3
+  lat: 35.6397133
+  lon: 129.3676697
+  category: 일반·북구
+  employment: 756
+  operating_firms: 20
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: ulsan_techno
+  name: 울산테크노
+  lat: 35.509326
+  lon: 129.300095
+  category: 일반·남구
+  employment: 3092
+  operating_firms: 143
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111) 울산테크노일반
+  coord_confidence: 중
+- id: gw
+  name: GW
+  lat: 35.548
+  lon: 129.112
+  category: 일반·울주군
+  employment: 549
+  operating_firms: 27
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: mobile_tech_valley
+  name: 모바일테크밸리
+  lat: 35.6372187
+  lon: 129.318581
+  category: 일반·북구
+  employment: 569
+  operating_firms: 14
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: energy_convergence
+  name: 에너지융합
+  lat: 35.35416
+  lon: 129.317917
+  category: 일반·울주군
+  employment: 690
+  operating_firms: 35
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: 국토부 SHP centroid (15081111)
+  coord_confidence: 중
+- id: cheongyang
+  name: 청양
+  lat: 35.405
+  lon: 129.31
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: muggerbon
+  name: 머거본
+  lat: 35.5
+  lon: 129.18
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: doha
+  name: 울산도하일반산업단지
+  lat: 35.505
+  lon: 129.145
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: ktx_station_area
+  name: 울산KT역세권일반산업단지
+  lat: 35.55
+  lon: 129.138
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: daedae
+  name: 대대일반산업단지
+  lat: 35.455
+  lon: 129.21
+  category: 일반·울주군
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: automotive_nammok
+  name: 자동차일반산업단지[구:남목]
+  lat: 35.545
+  lon: 129.43
+  category: 일반·동구
+  employment: 0
+  operating_firms: 0
+  source_file: kicox_general_20250630.csv
+  source_columns: 고용현황(명)_계, 가동업체(개)
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증
+- id: janghyeon
+  name: 울산장현
+  lat: 35.59
+  lon: 129.34
+  category: 도시첨단·중구
+  employment: null
+  operating_firms: 0
+  source_file: kicox_urban_20250930.csv
+  source_columns: 가동업체(개); 고용현황 컬럼 없음
+  coord_source: '임시·미검증: 검증좌표 CSV 미수록; 기존 좌표 유지(2026-06-21)'
+  coord_confidence: 미검증

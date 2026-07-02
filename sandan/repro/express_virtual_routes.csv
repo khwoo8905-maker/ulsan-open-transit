@@ -1,0 +1,4 @@
+corridor_id,destination_sandan_id,route_id,trip_id,middle_stop_count,middle_stops,additional_cover_boardings_07_09,stop_sequence
+ulsan_mipo_1,ulsan_mipo,SCN_EXPRESS_1,T_SCN_EXPRESS_1,3,전하아이파크(131) · 번덕마을(74) · 벽산아파트(82),287,S00994:남목1동 -> S00884:서부패밀리 아파트 -> S00876:대왕암공원입구 -> S01021:일산해수욕장 -> S01045:전하아이파크 -> S01024:번덕마을 -> S00964:벽산아파트 -> SCN_DST_ulsan_mipo:가상_울산ㆍ미포
+gilcheon_1,gilcheon,SCN_EXPRESS_2,T_SCN_EXPRESS_2,5,삼호교(211) · 신복교차로(487) · 울산대학교후문(225) · 다운아파트(136) · 양우내안애(135),1194,S00660:공업탑 -> S00752:신정시장앞 -> S01204:태화동 -> S01206:태화루 -> S00646:삼호교 -> S01310:신복교차로 -> S00641:울산대학교후문 -> S00267:다운아파트 -> S03535:양우내안애 -> SCN_DST_gilcheon:가상_길천
+sin_free_trade_1,sin_free_trade,SCN_EXPRESS_3,T_SCN_EXPRESS_3,3,벽산아파트(82) · 동구청(21) · 농수산물시장(23),126,S00994:남목1동 -> S00884:서부패밀리 아파트 -> S01071:동울산우체국 -> S00885:현대중공업미포문앞 -> S00964:벽산아파트 -> S00976:동구청 -> S00949:농수산물시장 -> SCN_DST_sin_free_trade:가상_신 (① + ②)

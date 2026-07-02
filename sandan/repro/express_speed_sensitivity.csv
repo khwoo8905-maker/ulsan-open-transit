@@ -1,0 +1,10 @@
+corridor_id,origin_area,destination_sandan_id,destination_sandan,representative_stop_count,valid_origin_stop_count,weighted_demand,before_access_min,after_access_min,saved_min,improved_origin_stops,speed_kmph
+ulsan_mipo_1,동구 정류장군집(남목1동·서부패밀리아파트·대왕암공원입구·일산해수욕장),ulsan_mipo,울산ㆍ미포,4,4,11234,109.8,46.3,63.4,4,25
+gilcheon_1,남구 정류장군집(공업탑·신정시장·태화동·태화루),gilcheon,길천,4,4,23571,115.8,78.9,36.9,4,25
+sin_free_trade_1,동구 정류장군집(남목1동·서부패밀리아파트·동울산우체국·현대중공업미포문),sin_free_trade,신 (① + ②),4,3,8902,112.5,49.4,63.1,3,25
+ulsan_mipo_1,동구 정류장군집(남목1동·서부패밀리아파트·대왕암공원입구·일산해수욕장),ulsan_mipo,울산ㆍ미포,4,4,11234,109.8,43.0,66.8,4,30
+gilcheon_1,남구 정류장군집(공업탑·신정시장·태화동·태화루),gilcheon,길천,4,4,23571,115.8,68.3,47.5,4,30
+sin_free_trade_1,동구 정류장군집(남목1동·서부패밀리아파트·동울산우체국·현대중공업미포문),sin_free_trade,신 (① + ②),4,3,8902,112.5,44.1,68.4,3,30
+ulsan_mipo_1,동구 정류장군집(남목1동·서부패밀리아파트·대왕암공원입구·일산해수욕장),ulsan_mipo,울산ㆍ미포,4,4,11234,109.8,39.7,70.1,4,35
+gilcheon_1,남구 정류장군집(공업탑·신정시장·태화동·태화루),gilcheon,길천,4,4,23571,115.8,59.3,56.5,4,35
+sin_free_trade_1,동구 정류장군집(남목1동·서부패밀리아파트·동울산우체국·현대중공업미포문),sin_free_trade,신 (① + ②),4,3,8902,112.5,39.8,72.6,3,35

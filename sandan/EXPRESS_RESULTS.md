@@ -1,25 +1,37 @@
 # 산단 가상 급행 통근버스 R5 시나리오 결과
 
-본 결과는 원본 `gtfs.zip`을 변경하지 않고 `experiments/sandan/gtfs_sandan_scenario.zip` 사본에 가상 급행 통근버스 3개를 추가한 뒤, `r5py`/R5 `TravelTimeMatrix` 실제 출력(`express_accessibility_by_stop.csv`)으로 재계산한 before/after 비교다.
+본 결과는 원본 `gtfs.zip`을 변경하지 않고 시나리오 GTFS 사본(`repro/gtfs_sandan_express_*.zip`)에 가상 급행 통근버스 3개를 추가한 뒤, `r5py`/R5 `TravelTimeMatrix` 실제 출력(`repro/express_accessibility_{25,30,35}kph_by_stop.csv`)으로 재계산한 before/after 비교다.
 
 ## 공통 가정
 
 - 운행일: `WD` calendar, 분석일 2026-06-15 포함
 - 운행시간: 07:00-09:00
 - 배차: 15분(`frequencies.txt` headway 900초)
-- 주행시간: 정류장간 직선거리 / 평속 35km/h + 정차 30초
+- 주행시간: 정류장간 직선거리 / 평속(25·30·35km/h 3안) + 정차 30초
 - 중간정류장: 출발권역-산단 직선경로 1.5km buffer 안 실제 GTFS 정류장 중 07-09시 승차 상위, 경로순 정렬
-- 비교권역: `solutions_corridors.csv`의 대표 출발정류장 4곳
+- 비교권역: `repro/solutions_corridors.csv`의 대표 출발정류장 4곳
 
-\n> 주: before는 출발권역 대표정류장 수요가중 기준으로 통일했다(미포 109.8분). 단축폭은 평속 가정(25~35km/h)에 따라 범위가 있으며 출근 러시 정체 미반영이라 상한에 가깝다.\n\n## Corridor별 접근분
+> 주: before/after는 모두 동일한 08:00 R5 출력과 동일한 대표정류장 수요가중 기준으로 재산출한 정정본이다(`repro/express_corridor_comparison.csv`). 단축폭은 평속 가정(25~35km/h)에 따라 범위가 있으며 출근 러시 정체 미반영이라 상한에 가깝다.
+
+## Corridor별 접근분 (평속 35km/h 기준)
 
 | corridor | 목적 산단 | 대표 출발정류장 | 중간정차 | 추가커버 07-09 | before | after | 단축 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `ulsan_mipo_1` | 울산ㆍ미포 | 4/4 | 3 | 287 | 108.3분 | 39.1분 | 69.2분 |
-| `gilcheon_1` | 길천 | 4/4 | 5 | 1,194 | 115.8분 | 58.9분 | 56.9분 |
-| `sin_free_trade_1` | 신 (① + ②) | 4/4 | 3 | 126 | 112.3분 | 41.1분 | 71.2분 |
+| `ulsan_mipo_1` | 울산ㆍ미포 | 4/4 | 3 | 287 | 109.8분 | 39.7분 | 70.1분 |
+| `gilcheon_1` | 길천 | 4/4 | 5 | 1,194 | 115.8분 | 59.3분 | 56.5분 |
+| `sin_free_trade_1` | 신 (① + ②) | 3/4 | 3 | 126 | 112.5분 | 39.8분 | 72.6분 |
 
-v9 순수직행 대비 v10 급행 after는 중간정차 반영으로 현실적으로 늘었다: ulsan_mipo_1 +6.2분; gilcheon_1 +5.7분; sin_free_trade_1 +4.2분.
+> `sin_free_trade_1`의 대표 출발정류장 4곳 중 1곳은 접근분 결측으로 3곳 가중 집계다.
+
+## 평속 민감도 (`repro/express_speed_sensitivity.csv`)
+
+| corridor | 25km/h 단축 | 30km/h 단축 | 35km/h 단축 |
+|---|---:|---:|---:|
+| `ulsan_mipo_1` | 63.4분 | 66.8분 | 70.1분 |
+| `gilcheon_1` | 36.9분 | 47.5분 | 56.5분 |
+| `sin_free_trade_1` | 63.1분 | 68.4분 | 72.6분 |
+
+순수직행이 아니라 중간 핵심정류장을 경유해도 단축효과는 거의 유지된다(순수직행 시나리오 대비 +4~6분 수준).
 
 ## 가상 급행 노선
 
