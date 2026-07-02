@@ -1,0 +1,2 @@
+corridor_id,destination_sandan_id,route_id,trip_id,middle_stop_count,middle_stops,additional_cover_boardings_07_09,stop_sequence
+onsan_1,onsan,SCN_EXPRESS_1,T_SCN_EXPRESS_1,3,염포동(55) · 장생포고래박물관(11) · 황암마을(9),75,S01087:성원상떼빌앞 -> S01088:신전 -> S01175:양정힐스테이트앞 -> S01176:현대자동차 정문 -> S01086:염포동 -> S00719:장생포고래박물관 -> S01814:황암마을 -> SCN_DST_onsan:가상_온산

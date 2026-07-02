@@ -1,0 +1,4 @@
+corridor_id,origin_area,destination_sandan_id,destination_sandan,representative_stop_count,valid_origin_stop_count,weighted_demand,before_access_min,after_access_min,saved_min,improved_origin_stops,speed_kmph
+onsan_1,북구 정류장군집(성원상떼빌·신전·양정힐스테이트·현대자동차정문),onsan,온산,4,4,4228,114.8,53.1,61.7,4,25
+onsan_1,북구 정류장군집(성원상떼빌·신전·양정힐스테이트·현대자동차정문),onsan,온산,4,4,4228,114.8,48.3,66.5,4,30
+onsan_1,북구 정류장군집(성원상떼빌·신전·양정힐스테이트·현대자동차정문),onsan,온산,4,4,4228,114.8,43.7,71.1,4,35

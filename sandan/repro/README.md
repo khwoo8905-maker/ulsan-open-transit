@@ -16,3 +16,10 @@
 - `run_r5_scenario.py` — 시나리오 GTFS 생성+R5 실행 스크립트. ※ 원 위치(`experiments/sandan/`) 기준 상대경로를 쓰므로 그대로 실행하려면 repo 루트에 `experiments/sandan/`으로 두고 돌려야 합니다.
 
 집계 정의·모집단은 [../CORRECTED_STATS.md](../CORRECTED_STATS.md) 참고.
+
+## 온산(onsan_1) 추가 시뮬 (별도 시나리오)
+
+- `onsan_express_accessibility_{25,30,35}kph_by_stop.csv` — 온산 급행 투입 후 R5 출력
+- `onsan_express_comparison.csv` — 온산 before/after 수요가중 집계 (v11 동일 기준)
+- `onsan_express_virtual_routes_*.csv` / `gtfs_sandan_onsan_*.zip` — 온산 가상노선 정의·시나리오 GTFS
+- `run_r5_onsan.py` / `compare_onsan.py` — 격리 실행·집계 스크립트 (설정: `config/ulsan_sandan_onsan_*.yaml`)
